@@ -1,0 +1,57 @@
+﻿@model IEnumerable<RoomManage.Models.Chating>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.message;
+}
+@{
+    var UserID = User.Identity.GetUserId();
+}
+<div class="chatingMessage">
+    @foreach (var item in Model)
+    {
+        if (item.sender == User.Identity.GetUserId())
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="comment-box">
+                        <div class="sendermessage">
+                            <i>@item.sendDate</i><br />
+                            <span>@item.message</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="comment-box">
+                        <div class="lead">
+                            <i>@item.sendDate</i><br />
+                            <span>@item.message</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+@Session["messagecount"]
+
+<div class="message-form">
+    <i id="error-message" class="alert alert-danger" hidden="hidden"></i>
+    <form method="post" id="send-message-form">
+        <div class="form-group">
+            <div class="col-md-4">
+                <textarea class="form-control" id="message"></textarea>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success send-message">@RoomManage.Resources.BarrennessController.Send</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+

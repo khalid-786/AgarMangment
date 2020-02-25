@@ -1,0 +1,86 @@
+﻿@model IEnumerable<RoomManage.Models.UserViewModel>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        @if (item.status)
+        {
+            <td>
+                <a data-id="@item.Id" class='btn btn-danger activate-status-user'>@RoomManage.Resources.AccountController.DeActiveUserAccount</a>
+            </td>
+        }
+        else
+        {
+            <td>
+                <a data-id="@item.Id" class='btn btn-success activate-status-user'>@RoomManage.Resources.AccountController.ActiveUserAccount</a>
+            </td>
+        }
+    </tr>
+}
+
+
+
+<script src="~/js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.activate-status-user').click(function () {
+                var me = $(this);
+                var confirmMessage = "";
+                var addedClass = "";
+                var removedClass = "";
+                var text = "";
+                if (me.hasClass("btn-success")) {
+                    confirmMessage = "@RoomManage.Resources.AccountController.ActiveUserAccountConfrimMessage";
+                    addedClass = "btn-danger";
+                    removedClass = "btn-success";
+                    text = "@RoomManage.Resources.AccountController.DeActiveUserAccount";
+                } else if(me.hasClass("btn-danger")) {
+                    confirmMessage = "@RoomManage.Resources.AccountController.DeActiveUserAccountConfrimMessage";
+                    addedClass = "btn-success";
+                    removedClass = "btn-danger";
+                    text = "@RoomManage.Resources.AccountController.ActiveUserAccount";
+                }
+                if (confirm(confirmMessage) ){
+
+                    var user_id = me.attr('data-id');
+                    $.ajax({
+                        url: "activateOrDeActivate",
+                        type: "GET",
+                        data: { user_id: user_id },
+                        error: function (xhr, error) {
+                            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                        },
+                        success: function (data) {
+                            me.removeClass(removedClass);
+                            me.addClass(addedClass);
+                            me.text(text);
+                            alert(data);
+
+                        }
+                    });
+                }
+            });
+
+
+        });
+
+    </script>
+
+

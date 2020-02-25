@@ -1,0 +1,84 @@
+﻿@model IEnumerable<RoomManage.Models.Comment>
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.UserCommentAndsuggest;
+}
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-4">@RoomManage.Resources.BarrennessController.CommentSearchDate</label>
+        <div class="col-md-6">
+            <input type="date" name="searchDate" id="searchDate" class="form-control" />
+        </div>
+    </div>
+</div>
+<h2>@RoomManage.Resources.BarrennessController.UserCommentAndsuggest</h2>
+
+
+<table class="table comment_data">
+   <thead>
+       <tr>
+           <th>
+               @Html.DisplayName(RoomManage.Resources.AccountController.UserName)
+           </th>
+           <th>
+               @Html.DisplayName(RoomManage.Resources.BarrennessController.message)
+           </th>
+           <th>
+               @Html.DisplayName(RoomManage.Resources.BarrennessController.sendDate)
+           </th>
+           <th></th>
+       </tr>
+   </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="tr_@item.Id">
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sendDate)
+                </td>
+                <td>
+                    <a data-id="@item.Id" class='btn btn-danger delete-comment'>@RoomManage.Resources.actointext.Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            //delete  comment method by admin
+            //ajax delete medicine function
+             $('.delete-comment').click(function () {
+                 if (confirm("@RoomManage.Resources.AccountController.DeleteCommentConfrimMessage")) {
+           var me = $(this);
+         
+           var id = me.attr('data-id');
+           $.ajax({
+               url: "deleteComment/" + '' + id,
+               type: "GET",
+               data: {},
+               error: function (xhr, error) {
+                   alert("An error occured: " + xhr.status + " " + xhr.statusText);
+               },
+               success: function (data) {
+
+                   var edit = $(".tr_" + id + "");
+                   edit.slideUp();
+                   alert(data);
+
+               }
+           });
+       }
+   });
+
+        });
+
+    </script>
+
+}

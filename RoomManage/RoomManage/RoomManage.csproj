@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C52B332-D308-4803-8BD3-F27112022D20}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoomManage</RootNamespace>
+    <AssemblyName>RoomManage</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BarrennessesController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908011920176_InitialCreate.cs" />
+    <Compile Include="Migrations\201908011920176_InitialCreate.Designer.cs">
+      <DependentUpon>201908011920176_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908011934131_addFulladressColumnAndToUserTable.cs" />
+    <Compile Include="Migrations\201908011934131_addFulladressColumnAndToUserTable.Designer.cs">
+      <DependentUpon>201908011934131_addFulladressColumnAndToUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908011957229_createCategoryTable.cs" />
+    <Compile Include="Migrations\201908011957229_createCategoryTable.Designer.cs">
+      <DependentUpon>201908011957229_createCategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908020926491_createBrrannessTable.cs" />
+    <Compile Include="Migrations\201908020926491_createBrrannessTable.Designer.cs">
+      <DependentUpon>201908020926491_createBrrannessTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908021518116_ChangePublisherColumnToUserIdInBarrennessTable.cs" />
+    <Compile Include="Migrations\201908021518116_ChangePublisherColumnToUserIdInBarrennessTable.Designer.cs">
+      <DependentUpon>201908021518116_ChangePublisherColumnToUserIdInBarrennessTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908031859513_editLeaseDateToPublishDate.cs" />
+    <Compile Include="Migrations\201908031859513_editLeaseDateToPublishDate.Designer.cs">
+      <DependentUpon>201908031859513_editLeaseDateToPublishDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908140723073_create-applyforbarrennestable.cs" />
+    <Compile Include="Migrations\201908140723073_create-applyforbarrennestable.Designer.cs">
+      <DependentUpon>201908140723073_create-applyforbarrennestable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908151241339_create-chating-table.cs" />
+    <Compile Include="Migrations\201908151241339_create-chating-table.Designer.cs">
+      <DependentUpon>201908151241339_create-chating-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908200736584_edit-dateColumn-to-senddate-in-chating-table.cs" />
+    <Compile Include="Migrations\201908200736584_edit-dateColumn-to-senddate-in-chating-table.Designer.cs">
+      <DependentUpon>201908200736584_edit-dateColumn-to-senddate-in-chating-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908201206203_editsendDateFromDateTimeToString.cs" />
+    <Compile Include="Migrations\201908201206203_editsendDateFromDateTimeToString.Designer.cs">
+      <DependentUpon>201908201206203_editsendDateFromDateTimeToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231942492_create-comment-table.cs" />
+    <Compile Include="Migrations\201908231942492_create-comment-table.Designer.cs">
+      <DependentUpon>201908231942492_create-comment-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908232040207_add-userType-column-to-usertable.cs" />
+    <Compile Include="Migrations\201908232040207_add-userType-column-to-usertable.Designer.cs">
+      <DependentUpon>201908232040207_add-userType-column-to-usertable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908232105451_add-relationship-between-user-and-commment.cs" />
+    <Compile Include="Migrations\201908232105451_add-relationship-between-user-and-commment.Designer.cs">
+      <DependentUpon>201908232105451_add-relationship-between-user-and-commment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908251231116_add-status-column-to-user-table.cs" />
+    <Compile Include="Migrations\201908251231116_add-status-column-to-user-table.Designer.cs">
+      <DependentUpon>201908251231116_add-status-column-to-user-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplyForBarrennes.cs" />
+    <Compile Include="Models\Barrenness.cs" />
+    <Compile Include="Models\Chating.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\getBarrennesApplierViewModel.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\getBarrennesByApplierViewModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AccountController.Designer.cs">
+      <DependentUpon>AccountController.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\actointext.Designer.cs">
+      <DependentUpon>actointext.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\BarrennessController.ar.Designer.cs">
+      <DependentUpon>BarrennessController.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\BarrennessController.Designer.cs">
+      <DependentUpon>BarrennessController.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\CategoryController.ar.Designer.cs">
+      <DependentUpon>CategoryController.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\CategoryController.Designer.cs">
+      <DependentUpon>CategoryController.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\actointext.ar.Designer.cs">
+      <DependentUpon>actointext.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AccountController.ar.Designer.cs">
+      <DependentUpon>AccountController.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeTexts.ar.Designer.cs">
+      <DependentUpon>HomeTexts.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeTexts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeTexts.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min-en.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\media.css" />
+    <Content Include="css\style-ar.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="js\bootstrap.min-en.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\frontend.js" />
+    <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="css\font\%24RMYIJFP.ttf" />
+    <Content Include="css\font\%24RQ623MB.ttf" />
+    <Content Include="css\font\072.TTF" />
+    <Content Include="css\font\091.TTF" />
+    <Content Include="css\font\106.ttf" />
+    <Content Include="css\font\25985~1.TTF" />
+    <Content Include="css\font\4YEOSP_.TTF" />
+    <Content Include="css\font\4YEOXMAS.TTF" />
+    <Content Include="css\font\50416___.TTF" />
+    <Content Include="css\font\51253___.TTF" />
+    <Content Include="css\font\51AHB.TTF" />
+    <Content Include="css\font\52 Sphereoids.ttf" />
+    <Content Include="css\font\53SSUN.ttf" />
+    <Content Include="css\font\53TSUN.TTF" />
+    <Content Include="css\font\5ALHBEEB.TTF" />
+    <Content Include="css\font\5ALJALA0.TTF" />
+    <Content Include="css\font\5bismili.TTF" />
+    <Content Include="css\font\5bismilu.TTF" />
+    <Content Include="css\font\5coktale.TTF" />
+    <Content Include="css\font\75678___.TTF" />
+    <Content Include="css\font\90 Stars BRK.ttf" />
+    <Content Include="css\font\98ARRO1.TTF" />
+    <Content Include="css\font\98ARRO2.TTF" />
+    <Content Include="css\font\98BALON.TTF" />
+    <Content Include="css\font\98BOXS.TTF" />
+    <Content Include="css\font\98BRD1.TTF" />
+    <Content Include="css\font\98BRD2.TTF" />
+    <Content Include="css\font\98BULLET.TTF" />
+    <Content Include="css\font\98BULNG.TTF" />
+    <Content Include="css\font\98PLANTS.ttf" />
+    <Content Include="css\font\98SHPAS1.TTF" />
+    <Content Include="css\font\98SHPAS2.TTF" />
+    <Content Include="css\font\aadash2-2.ttf" />
+    <Content Include="css\font\ABDALDEM-ALARABI.ttf" />
+    <Content Include="css\font\AdineKirnberg-Alternate.ttf" />
+    <Content Include="css\font\AdvertisingBold.ttf" />
+    <Content Include="css\font\AdvertisingExtraBold.ttf" />
+    <Content Include="css\font\ae_AlBattar.ttf" />
+    <Content Include="css\font\AF_Diwani Normal Traditional.ttf" />
+    <Content Include="css\font\AGA Aladdin Regular.ttf" />
+    <Content Include="css\font\AGA Arabesque Desktop.ttf" />
+    <Content Include="css\font\AGA Arabesque.ttf" />
+    <Content Include="css\font\AGA Cordoba Outline.ttf" />
+    <Content Include="css\font\AGA Dimnah Regular.ttf" />
+    <Content Include="css\font\AGA Furat Regular.ttf" />
+    <Content Include="css\font\AGA Granada Outline.ttf" />
+    <Content Include="css\font\AGA Granada Regular.ttf" />
+    <Content Include="css\font\AGA Granada Shaded.ttf" />
+    <Content Include="css\font\AGA Islamic Phrases.ttf" />
+    <Content Include="css\font\AGA Publishing.ttf" />
+    <Content Include="css\font\AGA Sindibad Regular.ttf" />
+    <Content Include="css\font\AGA-IslamicPhrases.TTF" />
+    <Content Include="css\font\AGArabsqSample.TTF" />
+    <Content Include="css\font\AGaramo0.otf" />
+    <Content Include="css\font\AGaramo2.otf" />
+    <Content Include="css\font\AGaramo4.otf" />
+    <Content Include="css\font\AGaramo6.otf" />
+    <Content Include="css\font\AGaramondPro-Bold.otf" />
+    <Content Include="css\font\AGaramondPro-BoldItalic.otf" />
+    <Content Include="css\font\AGaramondPro-Italic.otf" />
+    <Content Include="css\font\AGaramondPro-Regular.otf" />
+    <Content Include="css\font\AGA_Cordoba_Regular.ttf" />
+    <Content Include="css\font\AKHBR.TTF" />
+    <Content Include="css\font\Al-Hadith1.ttf" />
+    <Content Include="css\font\Al-Homam.TTF" />
+    <Content Include="css\font\AL-jass.ttf" />
+    <Content Include="css\font\Al-Kharashi 3.ttf" />
+    <Content Include="css\font\Al-Kharashi 36.ttf" />
+    <Content Include="css\font\Al-Kharashi 4.ttf" />
+    <Content Include="css\font\Al-Kharashi 5.ttf" />
+    <Content Include="css\font\Al-Kharashi 52.ttf" />
+    <Content Include="css\font\Al-Kharashi 58 Naskh.ttf" />
+    <Content Include="css\font\Al-Kharashi 59 Naskh.ttf" />
+    <Content Include="css\font\Al-Kharashi 60 Naskh.ttf" />
+    <Content Include="css\font\Al-Kharashi 61 Naskh.ttf" />
+    <Content Include="css\font\Al-Kharashi 65.ttf" />
+    <Content Include="css\font\Al-Kharashi Diwani 1.ttf" />
+    <Content Include="css\font\AL-Mateen.TTF" />
+    <Content Include="css\font\AL-Mohanad Bold.TTF" />
+    <Content Include="css\font\AL-Mohanad.TTF" />
+    <Content Include="css\font\Al-Mothnna.TTF" />
+    <Content Include="css\font\AL-Sarem Bold.TTF" />
+    <Content Include="css\font\Alawi Shafa.ttf" />
+    <Content Include="css\font\Alawi Symbols.ttf" />
+    <Content Include="css\font\Alawi Zakharef.ttf" />
+    <Content Include="css\font\albr65w.ttf" />
+    <Content Include="css\font\ALD401N.TTF" />
+    <Content Include="css\font\ALGER.TTF" />
+    <Content Include="css\font\ALGERINN.TTF" />
+    <Content Include="css\font\ALGRBASN.TTF" />
+    <Content Include="css\font\alhawe.ttf" />
+    <Content Include="css\font\ALHAWE_BOOK %281%29.TTF" />
+    <Content Include="css\font\ALHAWE_BOOK %282%29.TTF" />
+    <Content Include="css\font\ALHAWE_BOOK %283%29.TTF" />
+    <Content Include="css\font\ALHAWE_BOOK %284%29.TTF" />
+    <Content Include="css\font\ALHAWE_BOOK.TTF" />
+    <Content Include="css\font\ANIMALS.TTF" />
+    <Content Include="css\font\ANIMALS2.TTF" />
+    <Content Include="css\font\Ann  Crawlers.ttf" />
+    <Content Include="css\font\ARABSQ.TTF" />
+    <Content Include="css\font\arabswell_2.ttf" />
+    <Content Include="css\font\arabtype.ttf" />
+    <Content Include="css\font\AraSym Eid 1.ttf" />
+    <Content Include="css\font\AraSym Eid 2.ttf" />
+    <Content Include="css\font\ARBSQDTP.TTF" />
+    <Content Include="css\font\ARENCB.TTF" />
+    <Content Include="css\font\ARF Maps.ttf" />
+    <Content Include="css\font\ARF Mosques.ttf" />
+    <Content Include="css\font\arial.ttf" />
+    <Content Include="css\font\arialbd.ttf" />
+    <Content Include="css\font\arialbi.ttf" />
+    <Content Include="css\font\ariali.ttf" />
+    <Content Include="css\font\ARIALN.TTF" />
+    <Content Include="css\font\ARIALNB.TTF" />
+    <Content Include="css\font\ARIALNB2.TTF" />
+    <Content Include="css\font\ARIALNBI.TTF" />
+    <Content Include="css\font\ARIALNI.TTF" />
+    <Content Include="css\font\ARIALUNI.TTF" />
+    <Content Include="css\font\ARROW.TTF" />
+    <Content Include="css\font\Arrows2.ttf" />
+    <Content Include="css\font\A_Nemad2.ttf" />
+    <Content Include="css\font\BACC.TTF" />
+    <Content Include="css\font\BANGN___.TTF" />
+    <Content Include="css\font\Bassam Bold.ttf" />
+    <Content Include="css\font\BRSHSTK.TTF" />
+    <Content Include="css\font\CALIBRI.TTF" />
+    <Content Include="css\font\CALIBRIB.TTF" />
+    <Content Include="css\font\CALIBRII.TTF" />
+    <Content Include="css\font\CALIBRIZ.TTF" />
+    <Content Include="css\font\chanc___.ttf" />
+    <Content Include="css\font\c_saud5.TTF" />
+    <Content Include="css\font\DecoType Naskh Extensions.ttf" />
+    <Content Include="css\font\DecoType Naskh Special.ttf" />
+    <Content Include="css\font\DecoType Naskh Swashes.ttf" />
+    <Content Include="css\font\DecoType Naskh Variants.ttf" />
+    <Content Include="css\font\DecoType Naskh.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Em Space.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh En Space.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Special Em Space.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Special En Space.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Special.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Special_0.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Supplement 1 Variants.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Supplement 2 Extensions.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Supplement 3 Swashes.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh Supplement 4 Kashidahs.ttf" />
+    <Content Include="css\font\DecoType Professional Naskh.ttf" />
+    <Content Include="css\font\DecoType Thuluth.ttf" />
+    <Content Include="css\font\DesignerDividers.ttf" />
+    <Content Include="css\font\DIMNREG.TTF" />
+    <Content Include="css\font\DRAMMEN_.TTF" />
+    <Content Include="css\font\dtnaskh2.ttf" />
+    <Content Include="css\font\DTPN1.TTF" />
+    <Content Include="css\font\DUCOS___.TTF" />
+    <Content Include="css\font\E111Viva.TTF" />
+    <Content Include="css\font\ERGOBLKE.TTF" />
+    <Content Include="css\font\Fanan.ttf" />
+    <Content Include="css\font\FANTAS2.TTF" />
+    <Content Include="css\font\FloridVictorianOrnament.ttf" />
+    <Content Include="css\font\Flower Show.ttf" />
+    <Content Include="css\font\FLOWER.TTF" />
+    <Content Include="css\font\FOOD.TTF" />
+    <Content Include="css\font\FREEHAND.TTF" />
+    <Content Include="css\font\FS_Diwany.ttf" />
+    <Content Include="css\font\gift1.ttf" />
+    <Content Include="css\font\gift2.ttf" />
+    <Content Include="css\font\Hacen Newspaper.ttf" />
+    <Content Include="css\font\Harold%27s Pips.ttf" />
+    <Content Include="css\font\Hawaiian Quilt2.ttf" />
+    <Content Include="css\font\Hawaiian Quilt3.ttf" />
+    <Content Include="css\font\HQPB6.fon" />
+    <Content Include="css\font\HQPB7.ttf" />
+    <Content Include="css\font\impact.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Barrennesses\Create.cshtml" />
+    <Content Include="Views\Barrennesses\Delete.cshtml" />
+    <Content Include="Views\Barrennesses\Details.cshtml" />
+    <Content Include="Views\Barrennesses\Edit.cshtml" />
+    <Content Include="Views\Barrennesses\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\getBarrennesApplier.cshtml" />
+    <Content Include="Views\Home\chat.cshtml" />
+    <Content Include="Views\Home\getBarrennesByApplier.cshtml" />
+    <Content Include="Views\Account\EditProfile.cshtml" />
+    <Content Include="Views\Home\search.cshtml" />
+    <Content Include="Views\Home\SearchBarrennes.cshtml" />
+    <Content Include="Views\Home\getBarrennesByCategory.cshtml" />
+    <Content Include="Views\Home\comment.cshtml" />
+    <Content Include="Views\Home\getUserComment.cshtml" />
+    <Content Include="Views\Home\searchCommentByDate.cshtml" />
+    <Content Include="Views\Account\getUsers.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Roles\Details.cshtml" />
+    <Content Include="Views\Account\AddAdmin.cshtml" />
+    <Content Include="Views\Account\getAdmins.cshtml" />
+    <Content Include="Views\Account\getUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908011920176_InitialCreate.resx">
+      <DependentUpon>201908011920176_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011934131_addFulladressColumnAndToUserTable.resx">
+      <DependentUpon>201908011934131_addFulladressColumnAndToUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011957229_createCategoryTable.resx">
+      <DependentUpon>201908011957229_createCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908020926491_createBrrannessTable.resx">
+      <DependentUpon>201908020926491_createBrrannessTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908021518116_ChangePublisherColumnToUserIdInBarrennessTable.resx">
+      <DependentUpon>201908021518116_ChangePublisherColumnToUserIdInBarrennessTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908031859513_editLeaseDateToPublishDate.resx">
+      <DependentUpon>201908031859513_editLeaseDateToPublishDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908140723073_create-applyforbarrennestable.resx">
+      <DependentUpon>201908140723073_create-applyforbarrennestable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908151241339_create-chating-table.resx">
+      <DependentUpon>201908151241339_create-chating-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908200736584_edit-dateColumn-to-senddate-in-chating-table.resx">
+      <DependentUpon>201908200736584_edit-dateColumn-to-senddate-in-chating-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908201206203_editsendDateFromDateTimeToString.resx">
+      <DependentUpon>201908201206203_editsendDateFromDateTimeToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231942492_create-comment-table.resx">
+      <DependentUpon>201908231942492_create-comment-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908232040207_add-userType-column-to-usertable.resx">
+      <DependentUpon>201908232040207_add-userType-column-to-usertable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908232105451_add-relationship-between-user-and-commment.resx">
+      <DependentUpon>201908232105451_add-relationship-between-user-and-commment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908251231116_add-status-column-to-user-table.resx">
+      <DependentUpon>201908251231116_add-status-column-to-user-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountController.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountController.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\actointext.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>actointext.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BarrennessController.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BarrennessController.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BarrennessController.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BarrennessController.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CategoryController.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CategoryController.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CategoryController.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CategoryController.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\actointext.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>actointext.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountController.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountController.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeTexts.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeTexts.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeTexts.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeTexts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1672</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1672/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

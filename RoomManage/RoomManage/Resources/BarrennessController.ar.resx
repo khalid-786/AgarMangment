@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCommentWellcomMessage" xml:space="preserve">
+    <value>اضافة التعليقات و الشكوي و الإقترحات حول هذا الموقع التي لاحت لها اثناء تصفحك للموقع من اجل مساعدتنا لتطوير الموقع و حل المشكلات التي توجد في الموقع يصورة جيدة
+                نرجو منك أيها الزائر الكريم تحري الصدق في تعليقك او اقتراحك او شكوي و عدم الإستحزاء فجل من لا يخطأ ولا ينسى</value>
+  </data>
+  <data name="AppliedBarrennesWellComMessage" xml:space="preserve">
+    <value>العقارات التي تقدمت بكل انواعه اليها بسبب الشراء او الإيجار</value>
+  </data>
+  <data name="ApplierMessage" xml:space="preserve">
+    <value>رسالة المتقدم</value>
+  </data>
+  <data name="ApplyDate" xml:space="preserve">
+    <value>تاريخ التقدم</value>
+  </data>
+  <data name="ApplyErrorMessage" xml:space="preserve">
+    <value>لقد تقدمت لهذا العقار من قبل</value>
+  </data>
+  <data name="ApplyForBarrennes" xml:space="preserve">
+    <value>التقدم للعقار</value>
+  </data>
+  <data name="ApplyMessage" xml:space="preserve">
+    <value>التقدم للعقار من اجل الشراء او الايجار</value>
+  </data>
+  <data name="ApplyMessageRequired" xml:space="preserve">
+    <value>اكتب الرسالة التي تريد ارسالها لصاحب العقار</value>
+  </data>
+  <data name="ApplySuccessMessage" xml:space="preserve">
+    <value>تمت عملية التقدم بنجاح يمكنك التواصل مع صاحب العقار عن طريق الرسائل النصية عن طريق الموقع او استخدام رقم الهاتف</value>
+  </data>
+  <data name="barrenessDescription" xml:space="preserve">
+    <value>وصف العقار</value>
+  </data>
+  <data name="BarrennesApplied" xml:space="preserve">
+    <value>العقارات التي تقدمت  اليها</value>
+  </data>
+  <data name="BarrennesfullLocation" xml:space="preserve">
+    <value>عنوان العقار بالكامل</value>
+  </data>
+  <data name="BarrennesNumber" xml:space="preserve">
+    <value>العدد المتاح</value>
+  </data>
+  <data name="BarrennesState" xml:space="preserve">
+    <value>الولاية</value>
+  </data>
+  <data name="BarrennesStatus" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="ChatingRoom" xml:space="preserve">
+    <value>غرفة الدردشة</value>
+  </data>
+  <data name="CommentSearchDate" xml:space="preserve">
+    <value>التاريخ الذي تريد البحث فيه</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>تاكيد عملية التقدم</value>
+  </data>
+  <data name="leasePrice" xml:space="preserve">
+    <value>سعر الإيجار</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="paymentMethod" xml:space="preserve">
+    <value>طريقة الدفع</value>
+  </data>
+  <data name="PublishBarrennes" xml:space="preserve">
+    <value>نشر عقار جديد</value>
+  </data>
+  <data name="publishDate" xml:space="preserve">
+    <value>تاريخ النشر</value>
+  </data>
+  <data name="PublishedBarrennes" xml:space="preserve">
+    <value>العقارات التي نشرتها</value>
+  </data>
+  <data name="publisher_id" xml:space="preserve">
+    <value>صاحب العقار</value>
+  </data>
+  <data name="reciver" xml:space="preserve">
+    <value>المستقبل</value>
+  </data>
+  <data name="SearchMessage" xml:space="preserve">
+    <value>البحث التلقائي لنوع معين من العقار عن طريق اختيار نوع العقار ثم بعد ذلك اختيار الولاية التي تريد البحث فيها عن هذا النوع</value>
+  </data>
+  <data name="SelectBarrennes" xml:space="preserve">
+    <value>اختر نوع العقار</value>
+  </data>
+  <data name="SelectState" xml:space="preserve">
+    <value>اختر الولاية</value>
+  </data>
+  <data name="SendComment" xml:space="preserve">
+    <value>ارسال التعليق</value>
+  </data>
+  <data name="sendDate" xml:space="preserve">
+    <value>تاريخ اٌلإرسال</value>
+  </data>
+  <data name="sender" xml:space="preserve">
+    <value>المرسل</value>
+  </data>
+  <data name="UserCommentAndsuggest" xml:space="preserve">
+    <value>التعليقات و الإقترحات اليوم التي ارسلتها</value>
+  </data>
+  <data name="BarrennesApplier" xml:space="preserve">
+    <value>المتقدمين للعقار</value>
+  </data>
+  <data name="BarrennesCategoryManage" xml:space="preserve">
+    <value>إدارة أنواع العقارات</value>
+  </data>
+  <data name="BarrennesOfCategory" xml:space="preserve">
+    <value>العقارات الخاصة بها القسم</value>
+  </data>
+  <data name="SearchBarrennes" xml:space="preserve">
+    <value>البحث عن عقار</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>إرسال الرسالة</value>
+  </data>
+  <data name="confirmDeleteBarrennes" xml:space="preserve">
+    <value>هل أنت موافق على حذف  العقار</value>
+  </data>
+  <data name="DeleteBarrennes" xml:space="preserve">
+    <value> حذف العقار</value>
+  </data>
+  <data name="MyBarrennes" xml:space="preserve">
+    <value>عقارتي</value>
+  </data>
+  <data name="CommentAndsuggest" xml:space="preserve">
+    <value>تعليقات و إقترحات</value>
+  </data>
+  <data name="BarrennesInfo" xml:space="preserve">
+    <value>تفاصيل العقار</value>
+  </data>
+  <data name="EditBarrennesInfo" xml:space="preserve">
+    <value>تعديل بيانات العقار</value>
+  </data>
+</root>

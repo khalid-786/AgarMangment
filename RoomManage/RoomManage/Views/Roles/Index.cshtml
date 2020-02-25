@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = RoomManage.Resources.AccountController.RoleManage;
+}
+
+<h2>@RoomManage.Resources.AccountController.RoleManage</h2>
+
+<p>
+    @Html.ActionLink(RoomManage.Resources.AccountController.CreateNewRole, "Create", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName(RoomManage.Resources.AccountController.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+
+            @Html.ActionLink(RoomManage.Resources.actointext.Details, "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+}
+
+</table>

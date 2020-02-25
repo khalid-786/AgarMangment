@@ -1,0 +1,39 @@
+﻿@model RoomManage.Models.Barrenness
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.DeleteBarrennes;
+}
+
+
+
+<h3>@RoomManage.Resources.BarrennessController.confirmDeleteBarrennes ؟ </h3>
+<div>
+   
+    <hr />
+    <div class="row">
+        <div class="col-md-3">@Html.DisplayName(RoomManage.Resources.CategoryController.CategoryTitle)</div>
+        <div class="col-md-6">@Html.DisplayFor(model => model.Category.CategoryTitle)</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.barrenessDescription)</div>
+        <div class="col-md-6">@Html.DisplayFor(model => model.barrenessDescription)</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesState)</div>
+        <div class="col-md-6">@Html.DisplayFor(model => model.state)</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesfullLocation)</div>
+        <div class="col-md-6">@Html.DisplayFor(model => model.fullLocation)</div>
+    </div>
+   
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@RoomManage.Resources.actointext.confirmDelete" class="btn btn-danger" /> |
+            @Html.ActionLink(@RoomManage.Resources.actointext.GoToList, "Index" ,null ,new { @class = "btn btn-info"})
+        </div>
+    }
+</div>

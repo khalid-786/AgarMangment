@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>حول الموقع</value>
+  </data>
+  <data name="appname" xml:space="preserve">
+    <value>موقع العقارات</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>الإشتراك</value>
+  </data>
+  <data name="bootstraplib" xml:space="preserve">
+    <value>bootstrap.min.js</value>
+  </data>
+  <data name="bootstraplibcss" xml:space="preserve">
+    <value>bootstrap.min.css</value>
+  </data>
+  <data name="style" xml:space="preserve">
+    <value>style-ar.css</value>
+  </data>
+  <data name="aboutus" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="aboutwepsite" xml:space="preserve">
+    <value>موقع الكتروني للعقارات يوفر للمستخدم امكانية نشر عقاره للزوار إما بغرض البيع او الإيجار تم تطوره بواسطة 
+                            المبرمج خالد حسين طالب جامعي بكلية العلوم الرياضية و الحاسوب جامعة الجزيرة متخصص برمجة تطبيقات الويب و الأندرويد</value>
+  </data>
+  <data name="addcomment" xml:space="preserve">
+    <value>إبلاغ عن مشكلة او تعليق او اقتراحات</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>معلوت عن المبرمج</value>
+  </data>
+  <data name="contactus" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="facebook" xml:space="preserve">
+    <value>صفحتنا على الفيس بوك</value>
+  </data>
+  <data name="links" xml:space="preserve">
+    <value>روابط هامة</value>
+  </data>
+  <data name="publishrules" xml:space="preserve">
+    <value>جميع الحقوق محفوظة لموقع العقارات</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>أبحث عن عقار</value>
+  </data>
+  <data name="twiter" xml:space="preserve">
+    <value>تويتر</value>
+  </data>
+  <data name="whatsapp" xml:space="preserve">
+    <value>واتس اب</value>
+  </data>
+  <data name="youtube" xml:space="preserve">
+    <value>شاهدنا على اليوتيوب</value>
+  </data>
+  <data name="AboutMe" xml:space="preserve">
+    <value>السلام عليكم و رحمة وبركاته انا خالد حسين طالب في كلية العلوم الرياضية والحاسوب  جامعة الجزيرة السنة الخامسة لعام 2019 
+                    قسم الرياضيات و علوم الحاسوب برمجت هذا الموقع لمساعدة المجتمع السوداني خاصة و جميع المجتمعات الإسلامية و غير الإسلامية عامة 
+                    لمساعدتهم في نشر عقاراتهم لأجل البيع للزوار او البيع  تتم عملية البيع او الإيجار داخل هذا الموقع عن طريق ارسال الرسائل 
+                    بين الناشر و المتقدم أسأل الله عز وجل أن يجعل خالصا لوجه الكريم  وارجو من الزوار ان يكون ان يتحروا الصدق في هذا الموق و ان يتذكروا مراقبة الله لهم 
+                    ان تعاملوا بغش او استهزاء بالزوار الكرام والسلام عليكم ورحمة وبركاته</value>
+  </data>
+  <data name="EditMyAccount" xml:space="preserve">
+    <value>تعديل حسابي</value>
+  </data>
+  <data name="AddCommentWellcom" xml:space="preserve">
+    <value>اضافة التعليقات و الشكوي و الإقترحات حول هذا الموقع التي لاحت لها اثناء تصفحك للموقع من اجل مساعدتنا لتطوير الموقع و حل المشكلات التي توجد في الموقع يصورة جيدة نرجو منك أيها الزائر الكريم تحري الصدق في تعليقك او اقتراحك او شكوي و عدم الإستحزاء فجل من لا يخطأ ولا ينسى</value>
+  </data>
+  <data name="Arabic" xml:space="preserve">
+    <value>العربية</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>الإنجليزية</value>
+  </data>
+</root>

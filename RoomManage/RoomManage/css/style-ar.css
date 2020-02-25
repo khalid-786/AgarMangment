@@ -1,0 +1,195 @@
+@font-face {
+ font-family:initial;
+ /*src:url('font/AGA-IslamicPhrases')*/
+}
+@font-face {
+ font-family:inherit;
+ /*src:url('font/DecoType Professional Naskh Supplement 3 Swashes')*/
+}
+body{
+   
+}
+.dropdown-menu > li > a:hover{
+    color: #FFF;
+    padding-right: 30px;
+    background-color: #13c8f1;
+}
+.mynav {
+ background-color:#0c5c82;
+ border-color:#e7e7e7;
+ margin-bottom:auto;
+}
+.navbar-default .navbar-nav > li > a {
+ color:#FFF;
+ font-family:'Myriad ÚÑÈí';
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color:#EEE;
+  border-bottom:solid 3px #ba1675;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+    float: right;
+    color: antiquewhite;
+}
+.logo-size {
+width: 137px;
+height: 34px;
+}
+.navbar-user {
+    padding:10px;
+    padding-bottom:0;
+    width:250px;
+}
+
+.img-size{
+    font-size:70px;
+}
+.mybtn {
+color:#FFF;
+
+}
+.myfooter {
+ background-color:#0c5c82;
+ font-family:myfont;
+ padding:10px;
+ color:#FFF;
+ margin-top:70px;
+}
+.subfooter {
+     background-color:darkblue;
+     font-family:myfont2;
+     padding:10px;
+}
+.myfooter  ul  li  a {
+  color:#FFF;
+}
+
+#SearhName {
+    width:130px;
+    margin-top:8px;
+    transition:width 0.4s ease-in-out;
+}
+#SearhName:hover{
+    width:230px;
+}
+.comment-box{
+    margin-bottom: 20px;
+  }
+  .commetn-box image{
+    max-width: 100px;
+  }
+  .comment-box .lead{
+    position: relative;
+    padding: 10px;
+    background-color: #e0e0e0;
+    margin-top: 25px;
+    font-size:medium;
+  }
+  .comment-box:last-of-type ~hr{
+  display: none;
+ } 
+.img-circle {
+  max-width: 100px;
+}
+  .comment-box .lead:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: -28px;
+   top: 10px;
+  width: 0px;
+  height: 0px;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 15px;
+  border-color: transparent #e0e0e0 transparent transparent;
+  
+}
+.sendermessage {
+    position: relative;
+    padding: 10px;
+    background-color: #34b4d7;
+    margin-top: 25px;
+  
+}
+
+.comment-box .sendermessage:after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: -28px;
+   top: 10px;
+  width: 0px;
+  height: 0px;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 15px;
+  border-color: transparent #34b4d7 transparent transparent;
+  
+}
+.about-box{
+    background-color:#c7bfbf;
+    margin-bottom:10px;
+      font-family:myfont2;
+     padding:10px;
+}
+.about-box  h3{
+    font-size:x-large;
+    color:#0c5c82;
+    margin:20px;
+}
+    .about-box ul li i, .about-box p {
+        font-size: 17px;
+        color: #e0e0e0;
+        margin: 20px;
+    }
+    /*Start Price section*/
+.price-table{
+    background: #EEE;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-bottom:30px;
+}
+.price-table h3{
+    margin-bottom: 40px;
+}
+.price-table .price-box{
+    background: #FFF;
+    border: 2px solid #FFF;
+    padding: 10px;
+     margin-bottom: 20px;
+}
+.price-table .price-box h4{
+    margin: 5px 0 15px;
+}
+.price-table .price-box p{
+    margin: auto;
+    font-size: 18px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #EEE;
+    border-radius: 50%;
+    background: #010F07;
+    line-height: 100px;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    
+}
+.price-table .price-box:hover p{
+    -webkit-transform: scale(1.1,1.1) rotate(360deg);
+    -moz-transform: scale(1.1,1.1) rotate(360deg);
+    -o-transform: scale(1.1,1.1) rotate(360deg);
+    transform: scale(1.1,1.1) rotate(360deg);
+    border: 2px solid #122b40;
+}
+.price-table .price-box ul{
+
+    font-size: 18px;
+}
+.price-table .price-box button{
+    margin-top: 15px;
+}
+/*End Price section*/

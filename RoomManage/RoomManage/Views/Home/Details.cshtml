@@ -1,0 +1,62 @@
+﻿@model RoomManage.Models.Barrenness
+
+@{
+    ViewBag.Title = "تفاصيل العقار";
+}
+
+<h2>تفاصيل العقار</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">تفاصيل</div>
+                <div class="panel-body ">
+                    <div class="row">
+                        <div class="col-sm-2 ">@Html.DisplayName(RoomManage.Resources.CategoryController.CategoryTitle)</div>
+                        <div class="col-sm-2">@Html.DisplayFor(model => model.Category.CategoryTitle)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.barrenessDescription)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.barrenessDescription)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.leasePrice)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.leasePrice)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.paymentMethod)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.paymentMethod)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesNumber)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.Number)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.publishDate)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.publishDate)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesState)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.state)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesfullLocation)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.fullLocation)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">@Html.DisplayName(RoomManage.Resources.BarrennessController.publisher_id)</div>
+                        <div class="col-sm-6">@Html.DisplayFor(model => model.User.UserName)</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("التقدم للعقار", "apply", new { id = Model.Id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("الرجوع للرئيسية", "Index", null, new { @class = "btn btn-info" })
+</p>

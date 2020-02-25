@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RoomManage.Models.getBarrennesByApplierViewModel>
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.BarrennesApplied;
+}
+
+<h2>@RoomManage.Resources.BarrennessController.BarrennesApplied </h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info " >
+                <div class="panel-heading alert alert-success"><h4>@RoomManage.Resources.BarrennessController.BarrennesApplied</h4></div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.BarrennessController.barrenessDescription)
+                            </th>
+                            <th>
+                               @Html.DisplayName(RoomManage.Resources.BarrennessController.leasePrice)
+                            </th>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesState)
+                            </th>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.BarrennessController.publisher_id)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.barrennessDesc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.price)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.state)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.publisher_id)
+                                </td>
+                                <td>
+                                  
+                                    @Html.ActionLink(RoomManage.Resources.BarrennessController.ChatingRoom, "chat", "Home", new { Id = item.apply_id }, new { @class = "btn btn-info" })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

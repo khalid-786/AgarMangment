@@ -1,0 +1,28 @@
+﻿@model IEnumerable<RoomManage.Models.Comment>
+
+@foreach (var item in Model)
+{
+    if (item != null)
+    {
+        <tr class="tr_@item.Id">
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sendDate)
+            </td>
+            <td>
+                <a data-id="@item.Id" class='btn btn-danger delete-comment'>حذف</a>
+            </td>
+        </tr>
+    }
+    else
+    {
+        <td>
+            لا توجد تعليقات او اقتراحات في هذا لتاريخ
+        </td>
+    }
+}

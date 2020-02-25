@@ -1,0 +1,26 @@
+﻿ @model  Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+@{
+    ViewBag.Title = RoomManage.Resources.AccountController.RoleInfo;
+}
+
+<h2>@RoomManage.Resources.AccountController.RoleInfo</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(RoomManage.Resources.AccountController.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+  
+    @Html.ActionLink(RoomManage.Resources.actointext.GoToList, "Index" , null , new { @class = "btn btn-info"})
+</p>

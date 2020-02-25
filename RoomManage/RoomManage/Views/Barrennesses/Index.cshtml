@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RoomManage.Models.Barrenness>
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.MyBarrennes;
+}
+
+<h4>@RoomManage.Resources.BarrennessController.PublishedBarrennes</h4>
+
+<p>
+    @Html.ActionLink(RoomManage.Resources.BarrennessController.PublishBarrennes, "Create" ,null , new { @class = "btn btn-success"})
+</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4>@RoomManage.Resources.BarrennessController.PublishedBarrennes</h4></div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.CategoryController.CategoryTitle)
+                            </th>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.BarrennessController.leasePrice)
+                            </th>
+                            <th>
+                                @Html.DisplayName(RoomManage.Resources.BarrennessController.BarrennesState)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Category.CategoryTitle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.leasePrice)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.state)
+                                </td>
+                  
+                                <td>
+                                    @Html.ActionLink(RoomManage.Resources.actointext.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-success" })
+                                    @Html.ActionLink(RoomManage.Resources.actointext.Details, "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                                    @Html.ActionLink(RoomManage.Resources.actointext.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                                    @Html.ActionLink(RoomManage.Resources.actointext.Applier, "getBarrennesApplier", "Home", new { b_Id = item.Id } , new { @class = "btn btn-info" })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

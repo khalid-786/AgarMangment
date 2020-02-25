@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 30, 2017, 2:12:16 PM
+    Author     : cliprz
+*/
+/*Start Media Query*/
+
+/*Smart Phone And Tablets*/
+@media(max-width:767px){
+    .price-table .price-box p{
+   /* margin: auto;*/
+    
+}
+    .navbar-inverse .navbar-nav >li >a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .subscribe .form-control {
+        margin: 20px auto;
+    } 
+    .testimonial .carousel-indicators li{
+        width: 40px;
+        height: 40px;
+    }
+    .testimonial .carousel-indicators .active{
+      width: 40px;
+      height: 40px; 
+    }
+}
+
+
+
+/*Small Screen*/
+@media(min-width:768px) and (max-width:991px){
+    
+}
+
+/*Medium Screen*/
+@media(min-width:992px) and (max-width:1199px){
+    
+}
+
+/*Larg Screen*/
+@media(min-width:1200px){
+     
+}
+
+/*End Media Query*/
+

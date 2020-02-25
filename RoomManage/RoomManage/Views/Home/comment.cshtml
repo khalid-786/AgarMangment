@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RoomManage.Models.Comment>
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.CommentAndsuggest;
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="">
+
+            <p style="font-size:17px;">
+               @RoomManage.Resources.HomeTexts.AddCommentWellcom
+            </p>
+        </div>
+    </div>
+</div>
+<h3>@RoomManage.Resources.BarrennessController.UserCommentAndsuggest</h3>
+<div class="commentMessage">
+    @foreach (var item in Model)
+    {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="comment-box">
+                        <div class="lead">
+                            <i>@item.sendDate</i><br />
+                            <span>@item.message</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+  </div>     
+<div class="message-form">
+    <i id="error-message" class="alert alert-danger" hidden="hidden"></i>
+    <form method="post" id="send-comment-form">
+        <div class="form-group">
+            <div class="col-md-4">
+                <textarea class="form-control" id="comment"></textarea>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success send-comment">@RoomManage.Resources.BarrennessController.SendComment</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+

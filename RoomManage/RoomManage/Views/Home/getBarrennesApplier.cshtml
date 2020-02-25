@@ -1,0 +1,44 @@
+﻿@model IEnumerable<RoomManage.Models.getBarrennesApplierViewModel>
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.BarrennesApplier;
+}
+
+<h3>@RoomManage.Resources.BarrennessController.BarrennesApplier</h3>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName(RoomManage.Resources.AccountController.UserName)
+        </th>
+        <th>
+            @Html.DisplayName(RoomManage.Resources.AccountController.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayName(RoomManage.Resources.AccountController.FullLocation)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+      
+        <td>
+         @Html.ActionLink(RoomManage.Resources.BarrennessController.ChatingRoom, "chat", "Home", new { Id = item.apply_id }, new { @class = "btn btn-info" }) 
+        </td>
+    </tr>
+}
+
+</table>
+

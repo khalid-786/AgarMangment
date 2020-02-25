@@ -1,0 +1,39 @@
+﻿@model RoomManage.Models.Category
+
+@{
+    ViewBag.Title = RoomManage.Resources.CategoryController.DeleteCategory;
+}
+
+
+<h3>@RoomManage.Resources.actointext.confirmDeleteMessage ?</h3>
+<div>
+    <h4>@RoomManage.Resources.CategoryController.BarrennesCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(RoomManage.Resources.CategoryController.CategoryTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(RoomManage.Resources.CategoryController.CategoryDescrption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CstegoryDescrption)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@RoomManage.Resources.actointext.confirmDelete" class="btn btn-danger" /> |
+            @Html.ActionLink(RoomManage.Resources.actointext.GoToList, "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>

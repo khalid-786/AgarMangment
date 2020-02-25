@@ -1,0 +1,74 @@
+﻿@using Microsoft.AspNet.Identity
+@using RoomManage.Models
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        var db = new ApplicationDbContext();
+        var UserID = User.Identity.GetUserId();
+        var Curentuser = db.Users.Where(a => a.Id == UserID).SingleOrDefault();
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                    <strong>@RoomManage.Resources.AccountController.UserWellcom :@Curentuser.UserName</strong>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="navbar-user">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p class="text-center">
+                                        <span class="glyphicon glyphicon-user img-size"></span>
+                                    </p>
+
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="text-right">
+                                        <strong>@Curentuser.UserName</strong>
+                                    </p>
+                                    @if (Curentuser.UserType == "Admins")
+                                    {
+                                        <a href="~/Roles/Index" class="btn btn-success btn-block">@RoomManage.Resources.AccountController.RoleManage</a>
+                                        <a href="~/Account/GetUsers" class="btn btn-success btn-block">@RoomManage.Resources.AccountController.UserManage</a>
+                                        <a href="~/Home/getUserComment" class="btn btn-success btn-block">@RoomManage.Resources.BarrennessController.UserCommentAndsuggest</a>
+                                        <a href="~/Categories/Index" class="btn btn-success btn-block">@RoomManage.Resources.BarrennessController.BarrennesCategoryManage</a>
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink(@RoomManage.Resources.HomeTexts.addcomment, "comment", "Home", new { }, new { @class = "btn btn-success btn-block" })
+                                        <a href="~/Barrennesses/index" class="btn btn-success btn-block">@RoomManage.Resources.BarrennessController.PublishedBarrennes</a>
+                                        <a href="~/Home/getBarrennesByApplier" class="btn btn-success btn-block">@RoomManage.Resources.BarrennessController.BarrennesApplied</a>
+                                        <a href="~/Barrennesses/Create" class="btn btn-success btn-block">@RoomManage.Resources.BarrennessController.PublishBarrennes</a>
+                                    }
+                                    <a href="~/Account/EditProfile" class="btn btn-primary btn-block"> @RoomManage.Resources.HomeTexts.EditMyAccount</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <p><a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-danger btn-block">@RoomManage.Resources.HomeTexts.LogOut <i class="fa fa-lock"></i></a></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="~/Account/login">
+                @RoomManage.Resources.HomeTexts.Login  <i class="fa fa-user"></i>
+            </a>
+        </li>
+        <li>
+            <a href="~/Account/Register">@RoomManage.Resources.HomeTexts.Register <i class="fa fa-lock"></i></a>
+        </li>
+    </ul>
+}
+

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<RoomManage.Models.Barrenness>
+
+@{
+    ViewBag.Title = RoomManage.Resources.BarrennessController.BarrennesOfCategory;
+}
+
+<h2>@RoomManage.Resources.BarrennessController.BarrennesOfCategory</h2>
+
+<div class="row">
+    @foreach (var subitem in Model)
+    {
+        <div class="col-sm-6 col-md-3 " style="margin-left:20px;margin-right:15px; font-family:'Adobe Arabic'; height:auto;">
+            <h3>@Html.DisplayFor(modelItem => subitem.barrenessDescription)</h3>
+            <h4>@Html.DisplayFor(modelItem => subitem.state)</h4>
+            <h4>@Html.DisplayFor(modelItem => subitem.fullLocation)</h4>
+            @Html.ActionLink("التفاصيل", "Details", new { barrennesId = subitem.Id }, new { @class = "btn btn-info" })
+        </div>
+    }
+</div>
+
